@@ -1,1 +1,49 @@
+RESPONSIVE (ADAPTABILIDAD)
+========================================= */
 
+/* Tablets y Laptops pequeñas */
+@media (max-width: 992px) {
+    --sidebar-width: 220px;
+}
+
+/* Celulares (Pantalla Móvil) */
+@media (max-width: 768px) {
+    .layout { flex-direction: column; }
+    
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        display: none; /* Se puede alternar con JS para un menú hamburguesa */
+    }
+
+    .content { padding: 20px 15px; }
+
+    .card {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .card h2 { font-size: 1.5rem; }
+
+    .top-bar { padding: 0 15px; }
+}
+
+/* Pantallas extra pequeñas */
+@media (max-width: 480px) {
+    .container { padding: 10px; }
+    .card { padding: 25px 15px; }
+    .card h2 { font-size: 1.3rem; }
+    .card input { padding: 10px; }
+}
+
+/* =========================================
+   7. ANIMACIONES
+========================================= */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
